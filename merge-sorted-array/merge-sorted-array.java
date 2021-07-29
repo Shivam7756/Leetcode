@@ -5,7 +5,7 @@ class Solution {
         int j = 0;//traversing arr2
         int k = 0;//for the result array inserted to be in int a1 array
 
-        while(i<m && j<n)//traversing both the arrays
+        while(i<m && j<n)//traversing in both the arrays
         {
             if(a1[i]<a2[j])//filling the result array
             {
