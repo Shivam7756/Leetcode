@@ -1,2 +1,2 @@
 # Leetcode
-Containing all the codes written by me till date
+Containing Leetcode questions solved by me.
