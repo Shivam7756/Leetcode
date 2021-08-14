@@ -1,22 +1,45 @@
 class Solution {
-    public boolean isPalindrome(String s) {
-        s=s.toLowerCase();
-        String a=new String();
-        for(int i=0;i<s.length();i++)
-        {
-            if((s.charAt(i)>='a' && s.charAt(i)<='z')|| (s.charAt(i)>='0' && s.charAt(i)<='9'))
-                a=a+s.charAt(i);
-        }
-        int i=0;
-        int j=a.length()-1;
+
+public boolean isAlphaNum(char c)
+{
+// a == 97 and z == 122
+// 0 == 48 and 9 = 57
+if( (48<=c && c<=57) ||(c >= 97 && c <= 122)) {
+return true;
+}else{
+return false;
+}
+}
+public boolean isPalindrome(String s) {
+
+    // lower case conversion Abc -> abc
+    s = s.toLowerCase();
+    
+    // two pointer approch
+    // lo for lower index
+    // hi for higher index
+    int lo = 0;
+    int hi = s.length() -1;
+    
+    while(lo <= hi){
+        //chlow = lower indexed charecter
+        //chhigh = higher indexed character
+        char chlow = s.charAt(lo);
+        char chhigh = s.charAt(hi);
         
-        while(i<j)
-        {
-            if(a.charAt(i)!=a.charAt(j))
-                return false;
-            i++;
-            j--;
+        
+        if(!isAlphaNum(chlow)){
+            lo++;
+        }else if(!isAlphaNum(chhigh)){
+            hi--;
+        }else if(chlow == chhigh){
+            lo++;
+            hi--;
+        }else{
+            return false;
         }
-        return true;
+        
     }
+    return true;
+}
 }
