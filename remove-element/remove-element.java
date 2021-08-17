@@ -11,6 +11,6 @@ class Solution {
                k++;
             }
         }
-        return k;
+        return k;//returning index upto whch value to be returned
     }
 }
