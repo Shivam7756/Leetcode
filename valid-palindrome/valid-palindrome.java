@@ -1,5 +1,5 @@
 class Solution {
-
+    
 public boolean isAlphaNum(char c)
 {
 // a == 97 and z == 122
@@ -33,15 +33,12 @@ public boolean isPalindrome(String s) {
     while(lo <= hi){
         //chlow = lower indexed charecter
         //chhigh = higher indexed character
-        char chlow = ch[lo];
-        char chhigh = ch[hi];
-        
-        
-        if(!isAlphaNum(chlow)){
+   
+        if(!isAlphaNum(ch[lo])){
             lo++;
-        }else if(!isAlphaNum(chhigh)){
+        }else if(!isAlphaNum(ch[hi])){
             hi--;
-        }else if(chlow == chhigh){
+        }else if(ch[lo] == ch[hi]){
             lo++;
             hi--;
         }else{
