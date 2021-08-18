@@ -1,16 +1,14 @@
 class Solution {
     public String mergeAlternately(String s1, String s2) {
-        String s = "";
-       
-        for(int i = 0;i<s1.length()||i<s2.length();i++)
-        {
-            if(i<s1.length())
-                s = s + s1.charAt(i);
-            if(i<s2.length())
-                s= s + s2.charAt(i);    
-        }
-        
+          int i=0,j=0;
+        String s="";
+        while(i<s1.length() && j<s2.length())
+           s = s + s1.charAt(i++) + s2.charAt(j++);
+        while(i<s1.length())
+            s+= s1.charAt(i++) ;
+        while(j<s2.length())
+            s+= s2.charAt(j++) ;
         return s;
-       
+        
     }
 }
