@@ -26,7 +26,7 @@ class Magic
 class GfG
 {
     public static int binarySearch(int arr[], int low, int high)
-    {
+    {//lower bound concept
        
          for (int i=0;i<arr.length;i++){
            int mid = (low+high)/2;
