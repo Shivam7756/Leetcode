@@ -48,7 +48,7 @@ class Solution{
     
     public static int findClosest(int arr[], int n, int target) 
     { 
-        Arrays.sort(arr);
+       
        int ans = Integer.MAX_VALUE;
        int clo = 0;
        for(int i = 0; i<n; i++){
