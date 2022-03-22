@@ -26,12 +26,13 @@ class Solution {
         
         int count = 0;
         int i = 1;
-        while(i*i<N){
+        
+        while(i*i<N)
+        {
             count++;
             i++;
         }
-        
-        return count;
         // code here
+        return count;
     }
 }
